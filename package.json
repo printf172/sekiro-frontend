@@ -44,6 +44,7 @@
     "raven-js": "^3.27.2",
     "react": "^16.8.6",
     "react-chartjs-2": "^2.7.6",
+    "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^16.8.6",
     "react-perfect-scrollbar": "^1.5.3",
     "react-router-dom": "^5.2.0",
