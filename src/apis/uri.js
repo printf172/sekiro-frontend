@@ -3,7 +3,7 @@ export default {
   register: "/sekiro-api/user-info/register post query", // 注册
   refreshToken: "/sekiro-api/user-info/refreshToken get", // 刷新 token
   regenerateAPIToken: "/sekiro-api/user-info/regenerateAPIToken get", // 刷新 api token
-  updatePassword: "/sekiro-api/user-info/resetPassword get", // 修改密码
+  updatePassword: "/sekiro-api/user-info/resetPassword post query", // 修改密码
   getUser: "/sekiro-api/user-info/userInfo get", // 获取用户信息
   notice: "/sekiro-api/user-info/notice get", // 系统通知
   userAdd: "/sekiro-api/user-info/createUser get", // 创建用户

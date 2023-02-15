@@ -242,6 +242,30 @@ const Form = () => {
           initValue={configs["sekiro.docNotice"]}
           reload={() => setRefresh(+new Date())}/>
       )
+    }, {
+      key: "sekiro.useCustomSSLCertificate",
+      name: "使用自定义的ssl证书",
+      desc: "通过ssl（https、wss）访问网站时，需要设置ssl证书；开启本开关则证明需要使用用户配置的证书、关闭本开关则证明Sekiro将会模拟CA生成证书（请跟随文档安装根证书）",
+      component: (
+        <SingleInputItem
+          type={"switch"}
+          placeholder="使用自定义的ssl证书"
+          initKey="sekiro.useCustomSSLCertificate"
+          initValue={configs["sekiro.useCustomSSLCertificate"]}
+          reload={() => setRefresh(+new Date())}/>
+      )
+    }, {
+      key: "sekiro.autoGenSSLCertificateHostList",
+      name: "自动ssl证书的host列表",
+      desc: "当Sekior模拟CA生成证书时，寻找一个host列表，请在这里填写你部署网站的域名",
+      component: (
+        <SingleInputItem
+          multiline
+          placeholder="自动ssl证书的host列表"
+          initKey="sekiro.autoGenSSLCertificateHostList"
+          initValue={configs["sekiro.autoGenSSLCertificateHostList"]}
+          reload={() => setRefresh(+new Date())}/>
+      )
     }
   ];
 
