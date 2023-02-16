@@ -266,6 +266,18 @@ const Form = () => {
           initValue={configs["sekiro.autoGenSSLCertificateHostList"]}
           reload={() => setRefresh(+new Date())}/>
       )
+    }, {
+      key: "sekiro.open443Website",
+      name: "开启443端口服务",
+      desc: "对于大部分https网站，默认运行在443端口，当网页存在CSP（内存安全策略）的时候，大部分情况会要求同源端口一致，此时需要sekiro服务运行在443端口。请注意服务器没有其他软件占用443",
+      component: (
+        <SingleInputItem
+          type={"switch"}
+          placeholder="开启443端口服务"
+          initKey="sekiro.open443Website"
+          initValue={configs["sekiro.open443Website"]}
+          reload={() => setRefresh(+new Date())}/>
+      )
     }
   ];
 
